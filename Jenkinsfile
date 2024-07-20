@@ -21,6 +21,10 @@ pipeline {
     
    
         stage('test') {
+            input {
+  message 'check and execute'
+}
+
    
             steps {
                 echo 'testing the application'
