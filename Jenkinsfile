@@ -21,12 +21,11 @@ pipeline {
     
    
         stage('test') {
-            input {
-  message 'check and execute'
-}
+ 
 
    
             steps {
+               
                 echo 'testing the application'
                 echo " the version for testing is ${params.VERSION}"
                 
@@ -37,15 +36,13 @@ pipeline {
         stage('deploy') {
    
             steps {
+                 script {
+                    input message: 'Do you want to proceed to Deploy?', ok: 'Yes', submitter: 'admin'
+                }
                 echo 'deploying the application'
             }
         }
     }
-        post {
-  success {
-  
-      sh '${date}
-  }
-}
+
 
 }
