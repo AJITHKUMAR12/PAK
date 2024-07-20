@@ -31,14 +31,20 @@ pipeline {
                 
             }
         }
+        stage('Approval') {
+            steps {
+                script {
+                    input message: 'Do you want to proceed to Deploy?', ok: 'Yes', submitter: 'admin'
+                    echo 'Aprroval'
+                }
+            }
+        }
     
 
         stage('deploy') {
    
             steps {
-                 script {
-                    input message: 'Do you want to proceed to Deploy?', ok: 'Yes', submitter: 'admin'
-                }
+               
                 echo 'deploying the application'
             }
         }
