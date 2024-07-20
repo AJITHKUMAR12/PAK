@@ -41,4 +41,11 @@ pipeline {
             }
         }
     }
+        post {
+  success {
+  
+      sh '${date}
+  }
+}
+
 }
