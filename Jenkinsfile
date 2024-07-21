@@ -49,6 +49,7 @@ pipeline {
                 echo 'deploying the application'
             }
         }
+    }
         post {
   aborted {
    echo ' application aborted'
@@ -61,7 +62,7 @@ pipeline {
   }
 }
 
-    }
+    
 
 
 }
