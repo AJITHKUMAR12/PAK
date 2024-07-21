@@ -49,6 +49,18 @@ pipeline {
                 echo 'deploying the application'
             }
         }
+        post {
+  aborted {
+   echo ' application aborted'
+  }
+  success {
+ echo ' application sucess'
+  }
+  failure {
+  echo ' application failure'
+  }
+}
+
     }
 
 
