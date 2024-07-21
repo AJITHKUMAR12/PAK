@@ -52,7 +52,7 @@ pipeline {
 post {
   success {
    echo 'pipeline scuess'
-   // sh '${date}
+   //sh '${date}
   }
 }
 
