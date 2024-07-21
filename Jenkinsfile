@@ -4,6 +4,9 @@ pipeline {
   choice choices: ['1.10', '1.20', '1.30'], description: 'Select the version', name: 'VERSION'
   booleanParam defaultValue: true, description: 'check and execute', name: 'check'
     }
+    triggers {
+  cron '*/1 * * * *'
+}
          
 
 
